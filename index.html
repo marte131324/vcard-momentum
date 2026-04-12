@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>VCard | Momentum Fotografía y Video</title>
+
+    <!-- Open Graph / Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vcard-momentum.vercel.app/">
+    <meta property="og:title" content="Momentum | Fotografía y Video">
+    <meta property="og:description" content="Portafolio, servicios y contacto rápido. ¡Hablemos de tu evento!">
+    <meta property="og:image" itemprop="image" content="https://vcard-momentum.vercel.app/assets/PORTADA_OG.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://vcard-momentum.vercel.app/">
+    <meta name="twitter:title" content="Momentum | Fotografía y Video">
+    <meta name="twitter:description" content="Portafolio, servicios y contacto rápido. ¡Hablemos de tu evento!">
+    <meta name="twitter:image" content="https://vcard-momentum.vercel.app/assets/PORTADA_OG.jpg">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="fb:app_id" content="966242223397117" />
+    <!-- Nota: WhatsApp prefiere que la URL de la imagen sea absoluta (empezando con https://).
+         Si el vcard se sube a otro dominio o carpeta (ej. https://dominio.com/vcard/),
+         asegúrate de actualizar la ruta del 'content' arriba. -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css?v=2">
+
+    <!-- Third-party Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Cover Photo Background -->
+    <div class="site-bg">
+        <!-- Puedes cambiar esta imagen por la que más te guste para el hero -->
+        <img src="assets/PORTADA.jpg" alt="Fondo Portada" class="bg-img" preload="auto">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Main Scrollable Container -->
+    <main class="vcard-container">
+
+        <!-- Header: Profile & Identity -->
+        <header class="vcard-header animate-in">
+            <div class="profile-pic-wrapper">
+                <img src="assets/logo.jpg" alt="Logo Momentum" class="profile-pic">
+            </div>
+            <h1 class="photographer-name">Momentum</h1>
+            <p class="photographer-title" data-i18n="title">FOTOS E HISTORIAS</p>
+
+            <div class="quick-actions">
+                <a href="momentum.vcf" download="Momentum.vcf" class="pill-btn ui-interact">
+                    <i class="ri-contacts-book-line"></i> <span data-i18n="save_contact">Guardar Contacto</span>
+                </a>
+                <button class="pill-btn ui-interact" data-modal="modal-qr">
+                    <i class="ri-qr-code-line"></i> <span data-i18n="qr_code">Código QR</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Socials / Quick Links -->
+        <section class="social-links reveal-on-scroll">
+            <a href="https://www.instagram.com/momentumweddings_photo?igsh=MTlidXBuMjEyOXF6ZQ==" target="_blank"
+                rel="noopener noreferrer" aria-label="Instagram" class="social-btn glass-panel"><i
+                    class="ri-instagram-line"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100076424213966" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook" class="social-btn glass-panel"><i class="ri-facebook-circle-line"></i></a>
+            <a href="https://wa.me/5217205834724" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+                class="social-btn glass-panel"><i class="ri-whatsapp-line"></i></a>
+            <a href="https://momentumfotopachuca.com/" target="_blank" rel="noopener noreferrer" aria-label="Website"
+                class="social-btn glass-panel"><i class="ri-global-line"></i></a>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section reveal-on-scroll">
+            <div class="section-header">
+                <h2 data-i18n="portfolio_title">Portafolio Selecto</h2>
+                <a href="javascript:void(0);" class="view-all ui-interact" data-i18n="view_all">Ver Todo</a>
+            </div>
+
+            <!-- Filters (opcional: se pueden añadir más en el futuro) -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active ui-interact" data-filter="all" data-i18n="filter_all">Todos</button>
+                <button class="filter-btn ui-interact" data-filter="sesiones"
+                    data-i18n="filter_portrait">Sesiones</button>
+                <button class="filter-btn ui-interact" data-filter="bodas" data-i18n="filter_weddings">Eventos</button>
+            </div>
+
+            <!-- Horizontal Scrollable Gallery -->
+            <div class="gallery-scroll">
+
+                <!-- MAIN 5: Las Más Impactantes -->
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones10.jpg" loading="lazy" alt="Sesión Impactante">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="bodas" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Evento3.jpg" loading="lazy" alt="Evento Impactante">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones8.jpg" loading="lazy" alt="Sesión Impactante">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="bodas" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Evento6.jpg" loading="lazy" alt="Evento Impactante">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones9.jpg" loading="lazy" alt="Sesión Impactante">
+                </div>
+
+                <!-- CATEGORÍA: RESTO DE SESIONES -->
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones14.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones11.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones0.jpg" loading="lazy" alt="Sesión">
+                </div>
+
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones2.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones3.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones4.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones5.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones6.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones7.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones12.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones13.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones15.jpg" loading="lazy" alt="Sesión">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="sesiones" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Sesiones16.jpg" loading="lazy" alt="Sesión">
+                </div>
+
+                <!-- CATEGORÍA: EVENTOS -->
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="bodas" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Evento0.jpg" loading="lazy" alt="Evento Momentum">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="bodas" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Evento1.jpg" loading="lazy" alt="Evento Momentum">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="bodas" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Evento2.jpg" loading="lazy" alt="Evento Momentum">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="bodas" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Evento4.jpg" loading="lazy" alt="Evento Momentum">
+                </div>
+                <div class="gallery-item glass-panel reveal-on-scroll" data-category="bodas" data-tilt
+                    data-tilt-glare="true" data-tilt-max-glare="0.3" data-tilt-scale="1.02" data-tilt-max="5">
+                    <img src="assets/Evento5.jpg" loading="lazy" alt="Evento Momentum">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Essential Links Menu (Modern list alternative) -->
+        <section class="links-section reveal-on-scroll">
+            <a href="javascript:void(0);" class="link-card glass-panel ui-interact" data-modal="modal-servicios">
+                <div class="link-info">
+                    <h3 data-i18n="services">Servicios y Tarifas</h3>
+                    <p data-i18n="services_desc">Paquetes Especiales y Coberturas</p>
+                </div>
+                <i class="ri-arrow-right-line"></i>
+            </a>
+
+            <a href="javascript:void(0);" class="link-card glass-panel ui-interact" data-modal="modal-faq">
+                <div class="link-info">
+                    <h3 data-i18n="faq_title">Preguntas Frecuentes</h3>
+                    <p data-i18n="faq_desc">Despeja tus dudas rápido</p>
+                </div>
+                <i class="ri-question-answer-line"></i>
+            </a>
+        </section>
+
+        <!-- Spacing for fixed button -->
+        <div class="bottom-spacer"></div>
+    </main>
+
+    <!-- Fixed Bottom Call to Action -->
+    <div class="fab-container animate-in">
+        <button class="primary-btn ui-interact" data-modal="modal-contacto">
+            <i class="ri-calendar-check-line"></i> <span data-i18n="book_session">Agendar Cita</span>
+        </button>
+    </div>
+
+    <!-- Modals (Funcionalidad VCard) -->
+
+    <!-- Modal Contacto / Captación Leads -->
+    <div class="modal-overlay hidden" id="modal-contacto">
+        <div class="modal-content glass-panel-dark">
+            <button class="modal-close ui-interact"><i class="ri-close-line"></i></button>
+            <h2 data-i18n="contact_title">Hablemos de tu evento</h2>
+            <p class="desc" data-i18n="contact_desc">Déjame tus datos y me pondré en contacto contigo hoy mismo.</p>
+            <div class="auth-box" id="contact-form-box">
+                <input type="text" id="lead-name" placeholder="Tu nombre..." class="glass-input"
+                    data-i18n-placeholder="form_name">
+                <select id="lead-type" class="glass-input"
+                    style="color: #fff; background-color: rgba(255,255,255,0.05);">
+                    <option value="" disabled selected style="color:#000;">Tipo de Servicio</option>
+                    <option value="Paquete Queen" style="color:#000;">Paquete Especial Queen</option>
+                    <option value="Foto + Video" style="color:#000;">Cobertura Total (Foto + Video)</option>
+                    <option value="Solo Video" style="color:#000;">Cobertura Solo Video</option>
+                    <option value="Otro" style="color:#000;">Otro</option>
+                </select>
+                <input type="date" id="lead-date" class="glass-input" style="color-scheme: dark;">
+                <textarea id="lead-message" placeholder="¿Detalles adicionales?" class="glass-input" rows="2"
+                    data-i18n-placeholder="form_message"></textarea>
+                <button id="send-form-btn" class="primary-btn ui-interact btn-small">
+                    <span data-i18n="form_send">Cotizar en WhatsApp</span> <i class="ri-whatsapp-line"></i>
+                </button>
+            </div>
+            <!-- Estado de éxito -->
+            <div id="contact-success" class="hidden" style="text-align: center; padding: 1rem 0;">
+                <i class="ri-check-double-line" style="font-size: 3rem; color: #fff;"></i>
+                <h3 style="margin-top: 1rem;" data-i18n="form_success_title">¡Abriendo WhatsApp!</h3>
+                <p data-i18n="form_success_desc" style="margin-top: 0.5rem;">Serás redirigido en un segundo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal QR Code -->
+    <div class="modal-overlay hidden" id="modal-qr">
+        <div class="modal-content glass-panel-dark" style="align-items: center; text-align: center;">
+            <button class="modal-close ui-interact"><i class="ri-close-line"></i></button>
+            <h2 data-i18n="scan_qr">Escanea para Compartir</h2>
+            <p class="desc" data-i18n="scan_qr_desc">Comparte mi VCard apuntando con tu cámara.</p>
+            <div id="qrcode-container" style="background: white; padding: 1rem; border-radius: 12px; margin-top: 1rem;">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="modal-servicios">
+        <div class="modal-content glass-panel-dark">
+            <button class="modal-close ui-interact"><i class="ri-close-line"></i></button>
+            <h2>Servicios y Tarifas</h2>
+
+            <p><strong>Paquete Especial Queen</strong> - Maquillaje y peinado para la sesión, sesión fotografía con 20
+                fotos finales y 1 ampliación de 40x50 cm
+                <em>Precio introducción $3,000 MXN</em>
+            </p>
+            <p><strong>Cobertura Total (Fotografía + Video)</strong> - Cobertura fotográfica y audiovisual completa para
+                documentar tu evento.
+                <em>Desde $9,500 MXN</em>
+            </p>
+            <p><strong>Cobertura Solo Video</strong> - Servicio enfocado en cinematografía para capturar emociones en
+                movimiento.
+                <em>$6,000 MXN</em>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="modal-faq">
+        <div class="modal-content glass-panel-dark">
+            <button class="modal-close ui-interact"><i class="ri-close-line"></i></button>
+            <h2 data-i18n="faq_modal_title">Preguntas Frecuentes</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-btn ui-interact">¿Cuánto tiempo de anticipación necesito? <i
+                            class="ri-arrow-down-s-line"></i></button>
+                    <div class="faq-content">
+                        <p>Recomendamos reservar con la mayor anticipación posible para apartar tu fecha, al menos 1-3
+                            meses para eventos principales.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn ui-interact">¿Se requiere anticipo? <i
+                            class="ri-arrow-down-s-line"></i></button>
+                    <div class="faq-content">
+                        <p>Sí, requerimos un anticipo del 50% al momento de firmar el contrato para apartar la fecha y
+                            agendar los servicios.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn ui-interact">¿En cuánto tiempo entregan el material? <i
+                            class="ri-arrow-down-s-line"></i></button>
+                    <div class="faq-content">
+                        <p>El material se entrega en un lapso aproximado de 15 a 30 días hábiles posteriores al evento,
+                            garantizando un trabajo de alta calidad fotográfica y edición.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox de Galería (Full Screen Image Preview) -->
+    <div class="lightbox-overlay hidden" id="lightbox-modal">
+        <button class="lightbox-close ui-interact"><i class="ri-close-line"></i></button>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Vista previa">
+        </div>
+    </div>
+
+    <script src="js/app.js?v=2"></script>
+
+<!-- TREZE SIGNATURE -->
+<a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="display: flex; justify-content: center; text-decoration: none; margin-top: 24px; margin-bottom: 24px; opacity: 0.6; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+    <img src="assets/footer.png" alt="Ingeniería Digital por Treze Labs" style="max-height: 38px; object-fit: contain; filter: brightness(0);">
+</a>
+
+</body>
+
+</html>
