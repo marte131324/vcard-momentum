@@ -45,6 +45,62 @@
 
 <body>
 
+    <!-- GLOBAL SPLASH INJECTED BY TREZE LABS -->
+    <style>
+    #global-treze-splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+        z-index: 99999999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.8s ease;
+    }
+    .spinner-treze {
+        width: 40px;
+        height: 40px;
+        border: 3px solid transparent;
+        border-top-color: #4facfe;
+        border-radius: 50%;
+        animation: spinTreze 1s linear infinite;
+        margin-bottom: 20px;
+    }
+    @keyframes spinTreze {
+        100% { transform: rotate(360deg); }
+    }
+    </style>
+    <div id="global-treze-splash">
+        <div class="spinner-treze"></div>
+        <p style="color:#FFF; font-family:sans-serif; font-size:12px; letter-spacing:2px; text-transform:uppercase;">Cargando Ambiente</p>
+        <!-- TREZE LABS CO-BRANDING SPLASH -->
+        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0; animation: fadeInTreze 1.5s ease 0.5s forwards; text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; border: none; z-index: 9999999;">
+            <p style="color: #64748b; font-size: 11px; font-family: 'Inter', sans-serif; letter-spacing: 2px; text-transform: uppercase; margin: 0;">Powered by</p>
+            <img src="treze_footer.png" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.9;" alt="Treze Labs">
+            <style>@keyframes fadeInTreze { to { opacity: 1; } }</style>
+        </a>
+    </div>
+
+    <script>
+        document.body.style.overflow = 'hidden';
+        setTimeout(function() {
+            var splash = document.getElementById('global-treze-splash');
+            if(splash) {
+                splash.style.opacity = '0';
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 800);
+            }
+        }, 2500); // 2.5 seconds splash
+    </script>
+    <!-- END GLOBAL SPLASH -->
+
+
     <!-- Cover Photo Background -->
     <div class="site-bg">
         <!-- Puedes cambiar esta imagen por la que más te guste para el hero -->
@@ -369,7 +425,7 @@
     <p style="margin: 0 0 8px 0; font-weight: 400; font-size: 13px;">&copy; 2026 Reservados todos los derechos.</p>
     <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
         <span style="font-weight: 500; font-size: 13px;">Desarrollado por</span>
-        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="display: flex; align-items: center; text-decoration: none; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.8'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
+        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="display: flex; align-items: center; text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; border: none; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.8'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
             <img src="treze_footer.png" alt="Treze Labs" style="height: 32px; object-fit: contain; filter: brightness(0) invert(1);">
         </a>
     </div>
